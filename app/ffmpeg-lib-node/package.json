@@ -1,0 +1,18 @@
+{
+	"name": "ffmpeg-lib-node",
+	"version": "0.1.0",
+	"author": "chinaguo",
+	"dependencies": {
+		"nan": "^2.1.0",
+		"portfinder": "0.2.1"
+	},
+    "main": "./ffmpeg-lib-node",
+    "engines": {
+    "node": ">=0.12.0"
+    },
+    "keywords": [
+    	"audio",
+    	"ffmpeg",
+    	"lib"
+    ]
+}

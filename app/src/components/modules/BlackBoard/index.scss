@@ -1,0 +1,70 @@
+.module-black-board {
+  width: 100%;
+
+  .board-head,
+  .board-audio {
+    height: 50px;
+    line-height: 50px;
+    color: #262626;
+    padding-left: 18px;
+    font-size: 16px;
+  }
+
+  .board-content {
+    min-height: 200px;
+    line-height: 24px;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+    background: #444649;
+    > p {
+      text-align: left;
+    }
+    > img {
+      height: 160px;
+      cursor: pointer;
+    }
+  }
+
+  .board-foot {
+
+    .vjs-big-play-button {
+      font-size: 20px;
+      line-height: 28px;
+      height: 30px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -25px;
+      margin-top: -15px;
+      padding: 0;
+      cursor: pointer;
+      opacity: 1;
+      border: 1px solid #fff;
+      background-color: #2b333f;
+      background-color: rgba(43, 51, 63, .7);
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-transition: all .4s;
+      -moz-transition: all .4s;
+      -o-transition: all .4s;
+      transition: all .4s;
+    }
+
+    .vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .modal-mask {
+    text-align: center;
+
+    img {
+      max-width: 35%;
+    }
+  }
+}
