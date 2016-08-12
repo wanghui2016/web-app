@@ -1,27 +1,9 @@
-#Notes
-
- - I've created a CLI tool for scaffolding new projects generating components, services, and mixins. [VueGoCli](https://github.com/rodzzlessa24/vue-go-cli)
- - I'm doing a complete overhall of this project removing webpack usage and sticking just to rollup. Also adding testing and updating the boilerplate 
- 
-
-Vue Electron
-==============
-Comprehensive boilerplate application for [Electron runtime](http://electron.atom.io) and [Vue.js](http://vuejs.org). This project builds on top of the electron boilerplate by @szwacz. I've modified it to work with vuejs, vue-router, and vue-resource.
-
-Scope of this project:
-
-- Provide basic structure of the application so you can much easier grasp what should go where.
-- Give you cross-platform development environment, which works the same way on OSX, Windows and Linux.
-- Generate ready for distribution installers of your app for all supported operating systems.
-- Set up build scripts for Vue.js and .vue components.
-
-
 # Quick start
 The only development dependency of this project is [Node.js](https://nodejs.org). So just make sure you have it installed.
 Then type few commands known to every Node developer...
 ```
-git clone https://github.com/rodzzlessa24/vue-electron.git
-cd vue-electron
+git clone https://github.com/wanghui2016/web-app.git
+cd web-app
 npm i && npm start
 ```
 ... and boom! You have running desktop application on your screen.
@@ -31,7 +13,7 @@ npm i && npm start
 There are **two** `package.json` files:  
 
 #### 1. For development
-Sits on path: `vue-electron/package.json`. Here you declare dependencies for your development environment and build scripts. **This file is not distributed with real application!**
+Sits on path: `web-app/package.json`. Here you declare dependencies for your development environment and build scripts. **This file is not distributed with real application!**
 
 Also here you declare the version of Electron runtime you want to use:
 ```json
@@ -41,7 +23,7 @@ Also here you declare the version of Electron runtime you want to use:
 ```
 
 #### 2. For your application
-Sits on path: `vue-electron/app/package.json`. This is **real** manifest of your application. Declare your app dependencies here.
+Sits on path: `web-app/app/package.json`. This is **real** manifest of your application. Declare your app dependencies here.
 
 #### OMG, but seriously why there are two `package.json`?
 1. Native npm modules (those written in C, not JavaScript) need to be compiled, and here we have two different compilation targets for them. Those used in application need to be compiled against electron runtime, and all `devDependencies` need to be compiled against your locally installed node.js. Thanks to having two files this is trivial.
@@ -103,15 +85,6 @@ var fs = require('fs');
 // also need to be required.
 var moment = require('moment');
 ```
-
-#### Unit tests
-
-electron-boilerplate-vue has preconfigured [jasmine](http://jasmine.github.io/2.0/introduction.html) unit test runner. To run it go with standard:
-```
-npm test
-```
-You don't have to declare paths to spec files in any particular place. The runner will search through the project for all `*.spec.js` files and include them automatically.
-
 
 # Making a release
 
